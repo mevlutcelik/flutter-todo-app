@@ -18,7 +18,7 @@ class ToDoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 16),
+      margin: EdgeInsets.only(bottom: 0),
       child: ListTile(
         onTap: () {
           // print('Clicked on Todo Item.');
@@ -27,7 +27,7 @@ class ToDoItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
         tileColor: Colors.white,
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
@@ -44,16 +44,16 @@ class ToDoItem extends StatelessWidget {
         ),
         trailing: Container(
           padding: EdgeInsets.all(0),
-          margin: EdgeInsets.symmetric(vertical: 12),
+          margin: EdgeInsets.symmetric(vertical: 0),
           height: 36,
           width: 36,
           decoration: BoxDecoration(
-            color: tdRed,
-            borderRadius: BorderRadius.circular(4),
+            color: tdBGColor,
+            borderRadius: BorderRadius.circular(8),
           ),
           child: IconButton(
             color: tdRedDark,
-            iconSize: 14,
+            iconSize: 20,
             icon: Icon(Icons.delete_outline),
             onPressed: () {
               // print('Clicked on delete icon');

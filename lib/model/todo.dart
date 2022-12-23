@@ -11,8 +11,8 @@ class ToDo {
 
   static List<ToDo> todoList() {
     return [
-      ToDo(id: '01', todoText: 'Flutter uygulamasını teslim et', isDone: true ),
-      ToDo(id: '02', todoText: 'Finallere çalış', isDone: false ),
+      /*ToDo(id: '01', todoText: 'Flutter uygulamasını teslim et', isDone: true ),
+      ToDo(id: '02', todoText: 'Finallere çalış', isDone: false ),*/
     ];
   }
 }

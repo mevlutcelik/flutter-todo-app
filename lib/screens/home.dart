@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 16, bottom: 70, right: 16, top: 6),
+            padding: EdgeInsets.only(left: 16, bottom: 70, right: 16, top: 52),
             child: Column(
               children: [
                 searchBox(),
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
                       Container(
                         margin: EdgeInsets.only(
                           top: 20,
-                          bottom: 20,
+                          bottom: 0,
                         ),
                       ),
                       for (ToDo todoo in _foundToDo.reversed)
@@ -53,6 +53,20 @@ class _HomeState extends State<Home> {
                   ),
                 )
               ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 0,
+            ),
+            child: Text(
+              'Bu uygulama Mevlüt ÇELİK tarafından MAYKOD Mini Mobil Uygulama Yarışması için yapılmıştır.',
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.blueGrey,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
           Align(
@@ -98,15 +112,15 @@ class _HomeState extends State<Home> {
                   child: Icon(
                     Icons.add,
                     color: Colors.white,
-                    size: 16.0,
+                    size: 20.0,
                   ),
                   onPressed: () {
                     _addToDoItem(_todoController.text);
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: tdBlue,
                     minimumSize: Size(60, 60),
                     elevation: 10,
+                    backgroundColor: tdBlue,
                   ),
                 ),
               ),
@@ -209,7 +223,7 @@ class _HomeState extends State<Home> {
         ),
         Container(
           child: Text(
-            'Yapılacaklar',
+            'Yapılacaklar Listesi',
             style: TextStyle(
               fontSize: 18,
               color: tdBlue,
